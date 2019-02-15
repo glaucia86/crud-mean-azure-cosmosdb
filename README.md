@@ -6,7 +6,7 @@ Repositório responsável por realizar operação CRUD com MEAN (Mongo, Express,
 
 - Visual Studio Code **[DOWNLOAD AQUI](https://code.visualstudio.com/)**
 - Node.js **[DOWNLOAD AQUI](https://nodejs.org/en/)**
-- Angular 7 **[DOWNLOAD AQUI](https://angular.io/)**
+- Angular CLI ~ 7.2.2 **[DOWNLOAD AQUI](https://angular.io/)**
 - Mongodb Community Server **[DOWNLOAD AQUI](https://www.mongodb.com/download-center/community)**
 - MongodB Compass GUI **[DOWNLOAD AQUI](https://www.mongodb.com/download-center/compass)**
 - Boostrap 3/4 **[DOWNLOAD AQUI](https://getbootstrap.com/docs/3.3/)**
