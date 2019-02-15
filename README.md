@@ -1,6 +1,16 @@
 # CRUD MEAN (Mongo, Express, Angular & Node.js) Integração com Azure & CosmosDb
 
-Repositório responsável por realizar operação CRUD com MEAN (Mongo, Express, Angular & Node.js) integrados ao Azure & CosmosDb
+Repositório responsável por realizar operação CRUD com MEAN (Mongo, Express, Angular & Node.js) integrados ao Azure & CosmosDb.
+
+A aplicação consiste num cadastro de Funcionário para uma empresa XYZ. Onde a empresa, pode realizar as 4 operações do CRUD (Create, Read, Update & Delete). A aplicação estará integrada com o back-end (Node.js). E estará hosteada na plataforma Cloud da Microsoft.
+
+Os dados do Funcionário consiste em:
+
+**Classe: Funcionario**
+
++ idFuncionario: int
++ nomeFuncionario: string
++ profissao: string
 
 ## Recursos Utilizados no Desenvolvimento da Aplicação
 
@@ -14,20 +24,38 @@ Repositório responsável por realizar operação CRUD com MEAN (Mongo, Express,
 
 ## Executando a aplicação Localmente:
 
-1) Instalar os pacotes com o comando:
+### Executando a aplicação no lado do Front-End
+
+1) Instalar os pacotes com o comando: (dentro da pasta `front`)
 
 ``` 
 > npm install
 ```
 
-2) Depois executar o seguinte comando para executar a aplicação:
+2) Depois executar o seguinte comando para executar a aplicação (dentro da pasta `front`):
+
+```
+> ng serve
+```
+
+Depois bastam abrir o browser em **localhost:4200** (porta padrão de uma aplicação Angular)
+
+### Executando a aplicação no lado do Back-End
+
+1) Instalar os pacotes com o comando: (dentro da pasta `api`)
+
+``` 
+> npm install
+```
+
+2) Depois executar o seguinte comando para executar a aplicação (dentro da pasta `api`):
 
 ```
 > npm run dev
 ```
 
-Depois bastam abrir o browser em **localhost:8000**
-
 ## Dúvidas?! :triangular_flag_on_post:
 
 Se tiverem alguma dúvida referente ao código feito ou para configurar o ambiente bastam criar uma **[ISSUE](https://github.com/glaucia86/crud-mean-azure-cosmosdb/issues)** no GitHub que estarei respondendo a vocês!! :heart: :heart: :heart: :blush:
+
+**(documentação em desenvolvimento)**
