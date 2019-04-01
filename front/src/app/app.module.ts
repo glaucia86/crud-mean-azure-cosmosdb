@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { EmpAddComponent } from './emp-add/emp-add.component';
 import { EmpEditComponent } from './emp-edit/emp-edit.component';
 import { EmpGetComponent } from './emp-get/emp-get.component';
-import { EmpresaService } from './empresa.service';
+import { FuncionarioService } from './funcionario.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { EmpresaService } from './empresa.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [EmpresaService],
+  providers: [FuncionarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
