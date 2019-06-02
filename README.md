@@ -35,7 +35,7 @@ Os dados do Funcionário consiste em:
 2) Depois executar o seguinte comando para executar a aplicação (dentro da pasta `front`):
 
 ```
-> ng serve
+> ng serve -o
 ```
 
 Depois bastam abrir o browser em **localhost:4200** (porta padrão de uma aplicação Angular)
