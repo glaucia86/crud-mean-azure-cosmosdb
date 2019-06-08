@@ -1,3 +1,11 @@
+/**
+ * Arquivo: src/routes/index..js
+ * Descrição: arquivo responsável pela chamada da Api da aplicação.
+ * Data: 08/06/2019
+ * Author Glaucia Lemos
+ */
+
+
 const express = require('express');
 
 const router = express.Router();
