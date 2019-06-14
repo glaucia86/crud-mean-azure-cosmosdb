@@ -22,7 +22,7 @@ Os dados do Funcionário consiste em:
 - Boostrap 3/4 **[DOWNLOAD AQUI](https://getbootstrap.com/docs/3.3/)**
 - Cadastro no Site Azure **[AQUI](https://azure.microsoft.com/pt-br/features/azure-portal/)**
 
-## Executando a aplicação Localmente:
+## Executando a aplicação Localmente
 
 ### Executando a aplicação no lado do Front-End
 
