@@ -9,17 +9,20 @@ const app = express();
 // Importando o arquivo: 'database.js'
 const database = require('./config/database');
 
+mongoose.Promise = global.Promise;
+
 // ==> Conexão Base de Dados:
 mongoose.connect(database.local.localUrl, { useNewUrlParser: true }).then(() => {
   console.log('A Base de dados foi conectada com sucesso!');
 }, (err) => {
   console.log(`Erro ao conectar com a Base de Dados...: ${err}`);
+  process.exit();
 });
 
 // ==> Rotas
 
 const index = require('./routes/index');
-const funcionarioRoute = require('./routes/funcionarioRoute');
+// const funcionarioRoute = require('./routes/funcionarioRoute');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -27,7 +30,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.use('/', index);
-app.use('/funcionario', funcionarioRoute);
+app.use(index);
+// app.use(funcionarioRoute);
 
 module.exports = app;

@@ -14,17 +14,15 @@
  */
 const mongoose = require('mongoose');
 
-// const Schema = mongoose.Schema;
-const { Schema } = mongoose;
+const Schema = mongoose.Schema;
 
 const FuncionarioSchema = new Schema({
   nomeFuncionario: { type: String, required: true },
   cargo: { type: String, required: true },
   numeroIdentificador: { type: Number, required: true },
 }, {
+  timestamps: true,
   collection: 'funcionario',
 });
 
-const Funcionario = mongoose.model('Funcionario', FuncionarioSchema);
-
-module.exports = Funcionario;
+module.exports = mongoose.model('Funcionario', FuncionarioSchema);
