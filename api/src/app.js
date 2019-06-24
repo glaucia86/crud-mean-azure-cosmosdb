@@ -3,12 +3,11 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cors = require('cors');
-// const path = require('path');
+
+const app = express();
 
 // Importando o arquivo: 'database.js'
 const database = require('./config/database');
-
-const app = express();
 
 // ==> Conexão Base de Dados:
 mongoose.connect(database.local.localUrl, { useNewUrlParser: true }).then(() => {
