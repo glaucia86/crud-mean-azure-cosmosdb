@@ -22,7 +22,7 @@ mongoose.connect(database.local.localUrl, { useNewUrlParser: true }).then(() => 
 // ==> Rotas
 
 const index = require('./routes/index');
-// const funcionarioRoute = require('./routes/funcionarioRoute');
+const funcionarioRoute = require('./routes/funcionario.routes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -30,7 +30,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.use(index);
-// app.use(funcionarioRoute);
+app.use('/', index);
+app.use('/funcionario', funcionarioRoute);
 
 module.exports = app;

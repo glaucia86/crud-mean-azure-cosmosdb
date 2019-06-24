@@ -1,5 +1,5 @@
 /**
- * Arquivo: models/funcionario.js
+ * Arquivo: models/funcionario.model.js
  * Descrição: arquivo responsável pelo modelo da classe 'Funcionario'
  * Data: 23/06/2019
  * Author Glaucia Lemos
@@ -17,8 +17,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const FuncionarioSchema = new Schema({
-  nomeFuncionario: { type: String, required: true },
-  cargo: { type: String, required: true },
+  nomeFuncionario: { type: String, required: true, max: 50 },
+  cargo: { type: String, required: true, max: 30 },
   numeroIdentificador: { type: Number, required: true },
 }, {
   timestamps: true,

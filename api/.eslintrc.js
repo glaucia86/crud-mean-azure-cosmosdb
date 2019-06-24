@@ -6,6 +6,7 @@ module.exports = {
     "plugins": ["import"],
     "rules": {
       "no-console": "off",
-      "prefer-destructuring": "off"
+      "prefer-destructuring": "off",
+      "consistent-return": "off"
     }
 };
