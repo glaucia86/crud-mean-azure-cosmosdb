@@ -10,7 +10,10 @@ const express = require('express');
 const router = express.Router();
 const funcionarioController = require('../controllers/funcionario.controller');
 
-// ==> Rotas da api: 'Funcionario': (POST): localhost:8000/funcionario/create
+// ==> Rota Criar Novo 'Funcionario': (POST): localhost:8000/funcionario/create
 router.post('/create', funcionarioController.create);
+
+// ==> Rota Selecionar Todos 'Funcionarios': (GET): localhost:8000/funcionario/findAll
+router.get('/findAll', funcionarioController.findAll);
 
 module.exports = router;
