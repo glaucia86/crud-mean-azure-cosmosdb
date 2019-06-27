@@ -19,4 +19,7 @@ router.get('/funcionarios', funcionarioController.findAll);
 // ==> Rota Selecionar 'Funcionario' pelo 'Id': (GET): localhost:8000/api/funcionario/:id
 router.get('/funcionario/:id', funcionarioController.findById);
 
+// ==> Rota Atualizar 'Funcionario' pelo 'Id': (UPDATE): localhost:8000/api/funcionario/:id
+router.put('/funcionario/:id', funcionarioController.update);
+
 module.exports = router;
