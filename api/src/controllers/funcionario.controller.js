@@ -40,3 +40,21 @@ exports.findAll = (req, res) => {
       res.status(500).send({ message: 'Erro ao selecionar todos os Funcionários' || err.message });
     });
 };
+
+// ==> Método responsável por selecionar 'Funcionário' pelo 'Id':
+exports.findById = (req, res) => {
+  Funcionario.findById(req.params.id)
+    .then((funcionario) => {
+      if (!funcionario) {
+        return res.status(404).send({ message: `Funcionário(a) não encontrado(a) ${req.params.id}` });
+      }
+
+      res.status(200).send(funcionario);
+    }).catch((err) => {
+      if (err.kind === 'ObjectId') {
+        return res.status(400).send({ message: `Id do Funcionário(a) não encontrado(a) ${req.params.id}` });
+      }
+
+      return res.status(500).send({ messagem: `Erro ao selecionar os(as) Funcionários(as) ${req.params.id}` });
+    });
+};

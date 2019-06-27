@@ -31,6 +31,6 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.use('/', index);
-app.use('/funcionario', funcionarioRoute);
+app.use('/api/', funcionarioRoute);
 
 module.exports = app;
