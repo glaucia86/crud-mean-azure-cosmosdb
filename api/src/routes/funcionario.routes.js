@@ -22,4 +22,7 @@ router.get('/funcionario/:id', funcionarioController.findById);
 // ==> Rota Atualizar 'Funcionario' pelo 'Id': (UPDATE): localhost:8000/api/funcionario/:id
 router.put('/funcionario/:id', funcionarioController.update);
 
+// ==> Rota Deletar 'Funcionario' pelo 'Id': (DELETE): localhost:8000/api/funcionario/:id
+router.delete('/funcionario/:id', funcionarioController.delete);
+
 module.exports = router;
