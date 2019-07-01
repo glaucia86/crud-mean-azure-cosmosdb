@@ -1,6 +1,6 @@
 /* eslint-disable prefer-arrow-callback */
 /**
- * Arquivo: src/controllers/funcionarioController.js
+ * Arquivo: src/controllers/funcionario.controller.js
  * Descrição: arquivo responsável pelo CRUD da classe: 'Funcionário'
  * Data: 23/06/2019
  * Author Glaucia Lemos
@@ -9,7 +9,7 @@
 const Funcionario = require('../models/funcionario.model');
 
 // ==> Método responsável por criar um novo 'Funcionario':
-exports.create = (req, res) => {
+/* exports.create = (req, res) => {
   // ==> Validando os campos
   if (!req.body.nomeFuncionario) {
     return res.status(400).send({ message: 'Os campos não podem ser vazios!' });
@@ -29,7 +29,15 @@ exports.create = (req, res) => {
     }).catch((err) => {
       res.status(500).send({ message: 'Error ao criar um novo(a) Funcionário(a)' || err.message });
     });
+}; */
+
+// Async & Await:
+exports.create = async (req, res) => {
+  const novoFuncionario = new Funcionario(req.body);
+  const funcionario = await novoFuncionario.save();
+  res.status(201).send({ message: 'Funcionário(a) criado(a) com sucesso!', funcionario });
 };
+
 
 // ==> Método responsável por selecionar todos os 'Funcionários':
 exports.findAll = (req, res) => {

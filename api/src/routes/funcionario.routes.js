@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Arquivo: src/routes/funcionario.routes.js
  * Descrição: arquivo responsável pelas rotas da aplicação
@@ -5,9 +6,9 @@
  * Author Glaucia Lemos
  */
 
-const express = require('express');
+// const express = require('express');
 
-const router = express.Router();
+const router = require('express-promise-router')();
 const funcionarioController = require('../controllers/funcionario.controller');
 
 // ==> Rota Criar Novo 'Funcionario': (POST): localhost:8000/api/funcionario/
