@@ -14,17 +14,22 @@ const Funcionario = require('../models/funcionario.model');
 exports.create = async (req, res) => {
   const novoFuncionario = new Funcionario(req.body);
   const funcionario = await novoFuncionario.save();
-  res.status(201).send({ message: 'Funcionário(a) criado(a) com sucesso!', funcionario });
+  res.status(200).send({ message: 'Funcionário(a) criado(a) com sucesso!', funcionario });
 };
 
 // ==> Método responsável por selecionar todos os 'Funcionários':
 exports.findAll = async (req, res) => {
   const funcionarios = await Funcionario.find({});
-  res.status(201).send(funcionarios);
+  res.status(200).send(funcionarios);
 };
 
 // ==> Método responsável por selecionar 'Funcionário' pelo 'Id':
-exports.findById = (req, res) => {
+exports.findById = async (req, res) => {
+  const funcionario = await Funcionario.findById(req.params.id);
+  res.status(200).send(funcionario);
+};
+
+/* exports.findById = (req, res) => {
   Funcionario.findById(req.params.id)
     .then((funcionario) => {
       if (!funcionario) {
@@ -39,7 +44,7 @@ exports.findById = (req, res) => {
 
       return res.status(500).send({ messagem: `Erro ao selecionar os(as) Funcionários(as) ${req.params.id}` });
     });
-};
+}; */
 
 // ==> Método responsável por atualizar 'Funcionário' pelo 'Id':
 exports.update = (req, res) => {
