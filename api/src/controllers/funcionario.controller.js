@@ -31,6 +31,11 @@ exports.findById = async (req, res) => {
 
 // ==> Método responsável por atualizar 'Funcionário' pelo 'Id':
 exports.update = async (req, res) => {
+  // Validação de campos vazios:
+  if (!req.body.nomeFuncionario || !req.body.cargo || !req.body.numeroIdentificador) {
+    return res.status(400).send({ message: 'Os campos não podem ser vazios' });
+  }
+
   const funcionario = await Funcionario.findByIdAndUpdate(req.params.id, req.body);
   res.status(200).send({ message: 'Funcionário(a) atualizado(a) com sucesso!', funcionario });
 };
