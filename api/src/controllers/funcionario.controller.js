@@ -41,19 +41,7 @@ exports.update = async (req, res) => {
 };
 
 // Método responsável por deletar 'Funcionário pelo 'Id':
-exports.delete = (req, res) => {
-  Funcionario.findByIdAndDelete(req.params.id)
-    .then((funcionario) => {
-      if (!funcionario) {
-        return res.status(404).send({ message: `Id do Funcionário(a) não encontrado(a) ${req.params.id}` });
-      }
-
-      res.status(200).send({ message: 'Funcionário(a) excluído com sucesso!', funcionario });
-    }).catch((err) => {
-      if (err.kind === 'ObjectId') {
-        return res.status(404).send({ message: `Id do Funcionário(a) não encontrado(a) ${req.params.id}` });
-      }
-
-      return res.status(500).send({ message: `Erro ao excluir Funcionário(a) ${req.params.id}` });
-    });
+exports.delete = async (req, res) => {
+  const funcionario = await Funcionario.findByIdAndRemove(req.params.id);
+  res.status(200).send({ message: 'Funcionário(a) excluído com sucesso!', funcionario });
 };
