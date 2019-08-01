@@ -6,7 +6,7 @@
  */
 
 /**
- * Classe: Funcionario
+ * === Classe: Funcionario ===
  *  id: (number - guid gerado pelo MongoDb)
  *  nomeFuncionario: String
  *  cargo: String
@@ -16,7 +16,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const FuncionarioSchema = new Schema({
+const funcionarioSchema = new Schema({
   nomeFuncionario: { type: String, required: true, max: 50 },
   cargo: { type: String, required: true, max: 30 },
   numeroIdentificador: { type: Number, required: true },
@@ -25,4 +25,4 @@ const FuncionarioSchema = new Schema({
   collection: 'funcionario',
 });
 
-module.exports = mongoose.model('Funcionario', FuncionarioSchema);
+module.exports = mongoose.model('Funcionario', funcionarioSchema);

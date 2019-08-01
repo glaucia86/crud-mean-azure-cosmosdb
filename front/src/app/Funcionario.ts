@@ -6,7 +6,7 @@
  */
 
 export default class Funcionario {
-  nomeFuncionario: String;
-  cargo: String;
-  numeroIdentificador: Number;
+  nomeFuncionario: string;
+  cargo: string;
+  numeroIdentificador: number;
 }
