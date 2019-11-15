@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 // @ts-nocheck
 /**
  * Arquivo: src/routes/funcionario.routes.js

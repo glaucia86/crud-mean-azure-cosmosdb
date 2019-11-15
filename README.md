@@ -10,7 +10,8 @@ Os dados do Funcionário consiste em:
 
 + idFuncionario: int
 + nomeFuncionario: string
-+ profissao: string
++ cargo: string
++ numeroIdentificador: string
 
 ## Recursos Utilizados no Desenvolvimento da Aplicação
 
