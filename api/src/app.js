@@ -1,13 +1,21 @@
+/**
+ * Arquivo: server.js
+ * Descrição: arquivo responsável por toda a configuração da aplicação.
+ * Data: 01/08/2019
+ * Author: Glaucia Lemos
+ */
+
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const cors = require('cors');
 
 const app = express();
 
 // Importando o arquivo: 'database.js'
-const database = require('./config/database');
+const database = require('./config/database'); // ==> aqui é a conexão local
+// const databaseCosmosDb = require('./config/databaseCosmosDb'); // ==> aqui conexão com o CosmosDb
 
 mongoose.Promise = global.Promise;
 
@@ -20,8 +28,6 @@ mongoose.connect(database.local.localUrl, { useNewUrlParser: true }).then(() => 
 });
 
 // ==> Rotas
-
-const index = require('./routes/index');
 const funcionarioRoute = require('./routes/funcionario.routes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,7 +36,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.use('/', index);
 app.use('/api/', funcionarioRoute);
 
 module.exports = app;

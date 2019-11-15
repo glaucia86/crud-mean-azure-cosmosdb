@@ -22,7 +22,7 @@ const funcionarioSchema = new Schema({
   numeroIdentificador: { type: Number, required: true },
 }, {
   timestamps: true,
-  collection: 'funcionario',
+  collection: 'funcionarios',
 });
 
 module.exports = mongoose.model('Funcionario', funcionarioSchema);
