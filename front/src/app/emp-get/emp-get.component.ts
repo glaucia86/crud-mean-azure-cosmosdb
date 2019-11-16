@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import Funcionario from '../Funcionario';
+import { FuncionarioService } from '../funcionario.service';
+
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-emp-get',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpGetComponent implements OnInit {
 
-  constructor() { }
+  funcionarios: Funcionario[];
+
+  constructor(private funcionarioService: FuncionarioService) { }
 
   ngOnInit() {
+    this.funcionarioService
+      .getFuncionarios()
+      .subscribe((data: Funcionario[]) => {
+        this.funcionarios = data;
+      });
   }
 
 }
