@@ -15,13 +15,13 @@ Os dados do Funcionário consiste em:
 
 ## Recursos Utilizados no Desenvolvimento da Aplicação
 
-- Visual Studio Code **[DOWNLOAD AQUI](https://code.visualstudio.com/)**
+- Visual Studio Code **[DOWNLOAD AQUI](https://code.visualstudio.com/?WT.mc_id=javascript-0000-gllemos)**
 - Node.js **[DOWNLOAD AQUI](https://nodejs.org/en/)**
 - Angular CLI ~ 8.0.3 **[DOWNLOAD AQUI](https://angular.io/)**
 - Mongodb Community Server **[DOWNLOAD AQUI](https://www.mongodb.com/download-center/community)**
 - MongodB Compass GUI **[DOWNLOAD AQUI](https://www.mongodb.com/download-center/compass)**
 - Boostrap 3/4 **[DOWNLOAD AQUI](https://getbootstrap.com/docs/3.3/)**
-- Cadastro no Site Azure **[AQUI](https://azure.microsoft.com/pt-br/features/azure-portal/)**
+- Cadastro no Site Azure **[AQUI](https://azure.microsoft.com/features/azure-portal/?WT.mc_id=javascript-0000-gllemos)**
 
 ## Executando a aplicação Localmente
 
